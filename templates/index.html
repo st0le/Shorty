@@ -1,0 +1,19 @@
+<html>
+    <title> Shorty </title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <body>
+        <div class="center">
+            <br/><br/><br/><br/>
+            <h1>Shorty</h1>
+            <hr/>
+            <br/>
+            <form method="post" action="/">
+                <input type="text" name="url" placeholder="URL to shorten"/>
+                <input type="submit" value="Shorten"/>
+            </form>
+            {% if errmsg %} 
+                <div class="errormessage">{{ errmsg }}</div>
+            {% endif %}
+        </div>
+    </body>
+</html>
