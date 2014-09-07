@@ -36,7 +36,7 @@ class MainPage(webapp2.RequestHandler):
 class RedirectHandler(webapp2.RequestHandler):
     
     def get(self,shorty_hash):
-        urlEntry = UrlEntry.get_by_id(int(base62.decode(shorty_hash)))
+        urlEntry = UrlEntry.get_by_id(int(base62.decode(str(shorty_hash))))
         if not urlEntry :
             self.redirect("/?errmsg=Looks like you found a Broken Url.")
         else:
